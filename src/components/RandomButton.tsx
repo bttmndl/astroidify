@@ -3,14 +3,16 @@ import axios from "axios";
 import './styles.css';
 
 interface Props {
+  flag: boolean,
+  setFlag: React.Dispatch<React.SetStateAction<boolean>>,
+  setShowLoader: React.Dispatch<React.SetStateAction<boolean>>,
   setInputValue : React.Dispatch<React.SetStateAction<string>>,
 }
 
 
 const API_KEY = "2f5IdnsL4eoPjdcERC1vvB1rbF8VDq5Deh4cc2XQ";
 
-const RandomButton: React.FC <Props> = ({setInputValue}) => {
-    const [flag, setFlag] = useState<boolean>(false);
+const RandomButton: React.FC <Props> = ({flag, setFlag, setShowLoader, setInputValue}) => {
 
     //fetching the random astroid id 
     useEffect(() => {
@@ -29,7 +31,7 @@ const RandomButton: React.FC <Props> = ({setInputValue}) => {
     
 
     return (
-        <button className='input_button_random' onClick={()=>setFlag(true)}>Random Astroid</button>
+        <button className='input_button_random' onClick={()=>{setFlag(true); setShowLoader(true)}}>Random Astroid</button>
     )
 }
 
