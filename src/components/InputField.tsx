@@ -9,9 +9,7 @@ const InputField: React.FC <Props> = ({setInputValue}) => {
 
   //taking the input locally from the user
   const [inputLocal, setInputLocal] = useState<string>("");
-  const [isSubmitDisabled, setIsSubmitDisavled] =useState<boolean>(false)
 
-  
   return (
     <form className='input'>
         <input type="text" placeholder='Enter Astroid Id' className='input_box' onChange={(e)=>setInputLocal(e.target.value)}/>
