@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import InputField from "./components/InputField";
+import MainBody from "./components/MainBody";
+import RandomButton from './components/RandomButton';
 
-function App() {
+const App: React.FC =  ()=> {
+  //taking the input from user input
+  const [inputValue, setInputValue] = useState<string>("");
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <span className="heading">Astroidify</span>
+
+      <InputField setInputValue={setInputValue}/>
+      <RandomButton setInputValue={setInputValue} />
+      <MainBody inputValue ={inputValue}/>
     </div>
   );
 }
