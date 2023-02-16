@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component snapshot test UI renders correctly 1`] = `
+<div
+  className="App"
+>
+  <span
+    className="heading"
+  >
+    Astroidify
+  </span>
+  <form
+    className="input"
+  >
+    <input
+      className="input_box"
+      onChange={[Function]}
+      placeholder="Enter Astroid Id"
+      type="text"
+    />
+    <button
+      className="input_button"
+      disabled={true}
+      onClick={[Function]}
+    >
+      Find
+    </button>
+  </form>
+  <button
+    className="input_button_random"
+    onClick={[Function]}
+  >
+    Random Astroid
+  </button>
+  <br />
+  <br />
+  <br />
+</div>
+`;
+
+exports[`App component test renders correctly 1`] = `
+<div
+  className="App"
+>
+  <span
+    className="heading"
+  >
+    Astroidify
+  </span>
+  <form
+    className="input"
+  >
+    <input
+      className="input_box"
+      onChange={[Function]}
+      placeholder="Enter Astroid Id"
+      type="text"
+    />
+    <button
+      className="input_button"
+      disabled={true}
+      onClick={[Function]}
+    >
+      Find
+    </button>
+  </form>
+  <button
+    className="input_button_random"
+    onClick={[Function]}
+  >
+    Random Astroid
+  </button>
+  <br />
+  <br />
+  <br />
+</div>
+`;
+
+exports[`Country List Data renders correctly 1`] = `
+<div
+  className="App"
+>
+  <span
+    className="heading"
+  >
+    Astroidify
+  </span>
+  <form
+    className="input"
+  >
+    <input
+      className="input_box"
+      onChange={[Function]}
+      placeholder="Enter Astroid Id"
+      type="text"
+    />
+    <button
+      className="input_button"
+      disabled={true}
+      onClick={[Function]}
+    >
+      Find
+    </button>
+  </form>
+  <button
+    className="input_button_random"
+    onClick={[Function]}
+  >
+    Random Astroid
+  </button>
+  <br />
+  <br />
+  <br />
+</div>
+`;

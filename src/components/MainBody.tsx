@@ -20,16 +20,26 @@ const API_KEY = "2f5IdnsL4eoPjdcERC1vvB1rbF8VDq5Deh4cc2XQ";
 
 
 const MainBody: React.FC<Props> = ({showLoader, setShowLoader, inputValue}) => {
-    const [astroidData, setAstroidData] = useState<AstroidData>();
+    const [astroidData, setAstroidData] = useState<AstroidData | null>(null);
+    const [error, setError] = useState<string | null>(null);
     
 
     //fetching the particular astroid data which user typed 
     useEffect(() => {
-        async function getData(){
-            const dataResponse = await axios.get(`https://api.nasa.gov/neo/rest/v1/neo/${inputValue}?api_key=${API_KEY}`);
-            setAstroidData(dataResponse.data);
-            setShowLoader(false);
-        } 
+        async function getData() {
+            try {
+                const response = await axios.get(
+                `https://api.nasa.gov/neo/rest/v1/neo/${inputValue}?api_key=${API_KEY}`
+                );
+                setAstroidData(response.data);
+                setShowLoader(false);
+                setError(null);
+            } catch (error) {
+                console.error(error);
+                setError("An error occurred while fetching the asteroid data.");
+                setShowLoader(false);
+            }
+        }
 
         if(inputValue)getData();
 
