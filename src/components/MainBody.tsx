@@ -11,21 +11,26 @@ type AstroidData = {
 };
 
 interface Props {
-  showLoader: boolean,
-  setShowLoader: React.Dispatch<React.SetStateAction<boolean>>,
   inputValue : string,
 }
 
 const API_KEY = "2f5IdnsL4eoPjdcERC1vvB1rbF8VDq5Deh4cc2XQ";
 
 
+<<<<<<< HEAD
 const MainBody: React.FC<Props> = ({showLoader, setShowLoader, inputValue}) => {
     const [astroidData, setAstroidData] = useState<AstroidData | null>(null);
     const [error, setError] = useState<string | null>(null);
+=======
+const MainBody: React.FC<Props> = ({inputValue}) => {
+    const [astroidData, setAstroidData] = useState<AstroidData>();
+    const [showLoader, setShowLoader] = useState<boolean>(false);
+>>>>>>> parent of e219dac (showLoader button click delay bug fixed)
     
 
     //fetching the particular astroid data which user typed 
     useEffect(() => {
+<<<<<<< HEAD
         async function getData() {
             try {
                 const response = await axios.get(
@@ -40,6 +45,14 @@ const MainBody: React.FC<Props> = ({showLoader, setShowLoader, inputValue}) => {
                 setShowLoader(false);
             }
         }
+=======
+        async function getData(){
+            setShowLoader(true);
+            const dataResponse = await axios.get(`https://api.nasa.gov/neo/rest/v1/neo/${inputValue}?api_key=${API_KEY}`);
+            setAstroidData(dataResponse.data);
+            setShowLoader(false);
+        } 
+>>>>>>> parent of e219dac (showLoader button click delay bug fixed)
 
         if(inputValue)getData();
 
