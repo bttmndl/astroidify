@@ -14,20 +14,10 @@ const App: React.FC =  ()=> {
     <div className="App">
       <span className="heading">Astroidify</span>
 
-      <InputField setInputValue={setInputValue} />
-      <RandomButton
-        flag={flag}
-        setFlag={setFlag}
-        setShowLoader={setShowLoader}
-        setInputValue={setInputValue}
-      />
-      <MainBody
-        showLoader={showLoader}
-        setShowLoader={setShowLoader}
-        inputValue={inputValue}
-      />
+      <InputField setInputValue={setInputValue}/>
+      <RandomButton flag={flag} setFlag={setFlag} setShowLoader={setShowLoader} setInputValue={setInputValue} />
+      <MainBody showLoader={showLoader} setShowLoader={setShowLoader} inputValue ={inputValue}/>
       <h1>1st</h1>
-      <h1>2nd</h1>
     </div>
   );
 }
