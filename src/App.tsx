@@ -28,7 +28,6 @@ const App: React.FC =  ()=> {
       />
       <h1>1st</h1>
       <h1>2nd</h1>
-      <h1>3rd</h1>
     </div>
   );
 }
