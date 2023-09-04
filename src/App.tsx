@@ -17,6 +17,7 @@ const App: React.FC =  ()=> {
       <InputField setInputValue={setInputValue}/>
       <RandomButton flag={flag} setFlag={setFlag} setShowLoader={setShowLoader} setInputValue={setInputValue} />
       <MainBody showLoader={showLoader} setShowLoader={setShowLoader} inputValue ={inputValue}/>
+      <h1>1st</h1>
     </div>
   );
 }
